@@ -1,4 +1,4 @@
-import os
+ import os
 from aiogram import Bot, Dispatcher, types
 from aiogram.utils import executor
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
@@ -6,6 +6,11 @@ from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 # Берём токен из переменной окружения (Railway)
 TOKEN = os.getenv("BOT_TOKEN")
 
+# Проверяем, есть ли токен
+if TOKEN is None:
+    raise ValueError("Ошибка: переменная окружения BOT_TOKEN не найдена!")
+
+# Создаём бота
 bot = Bot(token=TOKEN)
 dp = Dispatcher(bot)
 
