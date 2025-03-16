@@ -2,8 +2,11 @@ import os
 from aiogram import Bot, Dispatcher, types
 from aiogram.utils import executor
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
+git add .
+git commit -m "Перенесла токен в переменные окружения"
+git push origin main
 
-TOKEN = os.getenv("7769096290:AAHzQ9bwBmTrOW1_EvD-Qep9jlYuisoE0BU")
+TOKEN = os.getenv("BOT_TOKEN")
 bot = Bot(token=TOKEN)
 dp = Dispatcher(bot)
 
